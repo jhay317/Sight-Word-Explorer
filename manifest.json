@@ -1,0 +1,17 @@
+{
+  "name": "Sight Word Explorer",
+  "short_name": "Sight Words",
+  "description": "An engaging sight words learning game and assessment tool for children aged 5-7.",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#e0f2fe",
+  "theme_color": "#0284c7",
+  "orientation": "landscape",
+  "icons": [
+    {
+      "src": "./logo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
