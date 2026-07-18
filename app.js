@@ -18,6 +18,41 @@ const WORD_LISTS = {
     'too', 'under', 'want', 'was', 'well', 'went', 'what', 'white', 'who', 'will',
     'with', 'yes'
   ],
+  'dolch-first-grade': [
+    'after', 'again', 'an', 'any', 'as', 'ask', 'by', 'could', 'every', 'fly',
+    'from', 'give', 'going', 'had', 'has', 'her', 'him', 'his', 'how', 'just',
+    'know', 'let', 'live', 'may', 'of', 'old', 'once', 'open', 'over', 'put',
+    'round', 'some', 'stop', 'take', 'thank', 'them', 'then', 'think', 'walk',
+    'were', 'when'
+  ],
+  'dolch-second-grade': [
+    'always', 'around', 'because', 'been', 'before', 'best', 'both', 'buy',
+    'call', 'cold', 'does', "don't", 'fast', 'first', 'five', 'found', 'gave',
+    'goes', 'green', 'its', 'made', 'many', 'off', 'or', 'pull', 'read',
+    'right', 'sing', 'sit', 'sleep', 'tell', 'their', 'these', 'those', 'upon',
+    'us', 'use', 'very', 'wash', 'which', 'why', 'wish', 'work', 'would',
+    'write', 'your'
+  ],
+  'dolch-third-grade': [
+    'about', 'better', 'bring', 'carry', 'clean', 'cut', 'done', 'draw',
+    'drink', 'eight', 'fall', 'far', 'full', 'got', 'grow', 'hold', 'hot',
+    'hurt', 'if', 'keep', 'kind', 'laugh', 'light', 'long', 'much', 'myself',
+    'never', 'only', 'own', 'pick', 'seven', 'shall', 'show', 'six', 'small',
+    'start', 'ten', 'today', 'together', 'try', 'warm'
+  ],
+  'dolch-nouns': [
+    'apple', 'baby', 'back', 'ball', 'bear', 'bed', 'bell', 'bird', 'birthday',
+    'boat', 'box', 'boy', 'bread', 'brother', 'cake', 'car', 'cat', 'chair',
+    'chicken', 'children', 'Christmas', 'coat', 'corn', 'cow', 'day', 'dog',
+    'doll', 'door', 'duck', 'egg', 'eye', 'farm', 'farmer', 'father', 'feet',
+    'fire', 'fish', 'floor', 'flower', 'game', 'garden', 'girl', 'good-bye',
+    'grass', 'ground', 'hand', 'head', 'hill', 'home', 'horse', 'house', 'kitty',
+    'leg', 'letter', 'man', 'men', 'milk', 'money', 'morning', 'mother', 'name',
+    'nest', 'night', 'paper', 'party', 'picture', 'pig', 'rabbit', 'rain', 'ring',
+    'robin', 'Santa Claus', 'school', 'seed', 'sheep', 'shoe', 'sister', 'snow',
+    'song', 'squirrel', 'stick', 'street', 'sun', 'table', 'thing', 'time', 'top',
+    'toy', 'tree', 'watch', 'water', 'way', 'wind', 'window', 'wood'
+  ],
   'fry-first-100': [
     'the', 'of', 'and', 'a', 'to', 'in', 'is', 'you', 'that', 'it',
     'he', 'was', 'for', 'on', 'are', 'as', 'with', 'his', 'they', 'I',
@@ -29,6 +64,34 @@ const WORD_LISTS = {
     'two', 'more', 'write', 'go', 'see', 'number', 'no', 'way', 'could', 'people',
     'my', 'than', 'first', 'water', 'been', 'called', 'who', 'am', 'its', 'now',
     'find', 'long', 'down', 'day', 'did', 'get', 'come', 'made', 'may', 'part'
+  ],
+  'fry-second-100': [
+    'after', 'again', 'air', 'also', 'America', 'animal', 'another', 'answer',
+    'any', 'around', 'ask', 'away', 'back', 'because', 'before', 'big', 'boy',
+    'came', 'change', 'different', 'does', 'end', 'even', 'follow', 'form',
+    'found', 'give', 'good', 'great', 'hand', 'help', 'here', 'home', 'house',
+    'just', 'kind', 'know', 'land', 'large', 'learn', 'letter', 'line',
+    'little', 'live', 'man', 'me', 'mean', 'men', 'most', 'mother', 'move',
+    'much', 'name', 'need', 'new', 'off', 'old', 'only', 'our', 'over', 'page',
+    'picture', 'place', 'play', 'point', 'put', 'read', 'right', 'same', 'say',
+    'see', 'sentence', 'set', 'should', 'show', 'small', 'sound', 'spell',
+    'still', 'study', 'such', 'take', 'tell', 'than', 'things', 'think',
+    'through', 'three', 'too', 'try', 'turn', 'us', 'very', 'want', 'well',
+    'went', 'where', 'why', 'work', 'world', 'years'
+  ],
+  'fry-third-100': [
+    'above', 'add', 'almost', 'along', 'always', 'began', 'being', 'below',
+    'between', 'book', 'both', 'car', 'carry', 'children', 'city', 'close',
+    'country', 'cut', "don't", 'earth', 'eat', 'enough', 'every', 'example',
+    'eyes', 'face', 'family', 'far', 'father', 'feet', 'few', 'food', 'four',
+    'girl', 'got', 'grow', 'group', 'hard', 'head', 'hear', 'high', 'idea',
+    'important', 'Indians', "it's", 'keep', 'kept', 'last', 'later', 'leave',
+    'left', 'let', 'life', 'light', 'list', 'long', 'might', 'mile', 'miss',
+    'mountains', 'near', 'never', 'next', 'night', 'often', 'once', 'open',
+    'own', 'paper', 'plants', 'really', 'river', 'run', 'saw', 'school', 'sea',
+    'second', 'seemed', 'side', 'something', 'song', 'soon', 'started', 'state',
+    'stop', 'talk', 'thought', 'those', 'together', 'took', 'trees', 'under',
+    'until', 'walk', 'watch', 'white', 'while', 'without', 'young'
   ]
 };
 
@@ -64,6 +127,7 @@ class GameState {
     this.audioEnabled = true;
     this.activeListKey = 'kindergarten-easy';
     this.voiceKidPitch = true;
+    this.difficulty = 'easy';
     
     // Tracking word results: { "the": { correct: 3, incorrect: 0 } }
     this.wordStats = {};
@@ -92,6 +156,7 @@ class GameState {
         this.audioEnabled = parsed.audioEnabled !== undefined ? parsed.audioEnabled : true;
         this.activeListKey = parsed.activeListKey || 'kindergarten-easy';
         this.voiceKidPitch = parsed.voiceKidPitch !== undefined ? parsed.voiceKidPitch : true;
+        this.difficulty = parsed.difficulty || 'easy';
         this.wordStats = parsed.wordStats || {};
         this.disabledWords = parsed.disabledWords || {};
         this.ownedStickers = parsed.ownedStickers || ['rocket', 'palm', 'fish'];
@@ -109,6 +174,7 @@ class GameState {
       audioEnabled: this.audioEnabled,
       activeListKey: this.activeListKey,
       voiceKidPitch: this.voiceKidPitch,
+      difficulty: this.difficulty,
       wordStats: this.wordStats,
       disabledWords: this.disabledWords,
       ownedStickers: this.ownedStickers,
@@ -143,6 +209,7 @@ class GameState {
     this.audioEnabled = true;
     this.activeListKey = 'kindergarten-easy';
     this.voiceKidPitch = true;
+    this.difficulty = 'easy';
     this.wordStats = {};
     this.disabledWords = {};
     this.ownedStickers = ['rocket', 'palm', 'fish'];
@@ -296,8 +363,11 @@ class SpeechEngine {
       utterance.voice = this.voice;
     }
     
-    // Children standard setup: slower pacing, higher pitch
-    utterance.rate = 0.82; 
+    // Children standard setup: rate paced by difficulty, higher pitch
+    let rate = 0.82;
+    if (STATE.difficulty === 'medium') rate = 0.92;
+    else if (STATE.difficulty === 'hard') rate = 1.02;
+    utterance.rate = rate;
     utterance.pitch = STATE.voiceKidPitch ? 1.35 : 1.0; 
     
     if (onEndCallback) {
@@ -529,7 +599,11 @@ function startAssessmentFlow() {
   
   // Pick active word pool
   const wordPool = getActiveWordPool();
-  if (wordPool.length < 5) {
+  let requiredWords = 3;
+  if (STATE.difficulty === 'medium') requiredWords = 4;
+  else if (STATE.difficulty === 'hard') requiredWords = 5;
+
+  if (wordPool.length < requiredWords) {
     showToast("Warning: Word list too short!");
     APP.navigateTo('screen-game-selection');
     return;
@@ -542,7 +616,11 @@ function startAssessmentFlow() {
   
   targetWords.forEach(word => {
     // Generate distractors
-    const distractors = wordPool.filter(w => w !== word).sort(() => 0.5 - Math.random()).slice(0, 2);
+    let distCount = 2;
+    if (STATE.difficulty === 'medium') distCount = 3;
+    else if (STATE.difficulty === 'hard') distCount = 4;
+
+    const distractors = wordPool.filter(w => w !== word).sort(() => 0.5 - Math.random()).slice(0, distCount);
     const options = [word, ...distractors].sort(() => 0.5 - Math.random());
     assessmentQuestions.push({
       target: word,
@@ -567,6 +645,7 @@ function loadAssessmentQuestion() {
   
   // Render options
   const container = document.getElementById('assessment-options-container');
+  container.className = `cards-layout options-${q.options.length}`;
   container.innerHTML = '';
   
   q.options.forEach(word => {
@@ -688,6 +767,10 @@ function setupDashboard() {
   const lvlSel = document.getElementById('word-list-selector');
   lvlSel.value = STATE.activeListKey;
   
+  // Difficulty selector
+  const diffSel = document.getElementById('game-difficulty-selector');
+  diffSel.value = STATE.difficulty;
+  
   // Checkbox voice
   const kidPitchCheck = document.getElementById('voice-gender');
   kidPitchCheck.checked = STATE.voiceKidPitch;
@@ -697,6 +780,11 @@ function setupDashboard() {
     STATE.activeListKey = e.target.value;
     STATE.save();
     setupDashboard(); // Redraw matrix
+  };
+
+  diffSel.onchange = (e) => {
+    STATE.difficulty = e.target.value;
+    STATE.save();
   };
 
   kidPitchCheck.onchange = (e) => {
@@ -792,7 +880,11 @@ function startGameBubblePop() {
 
   // Start spawn intervals
   if (bubbleSpawnTimer) clearInterval(bubbleSpawnTimer);
-  bubbleSpawnTimer = setInterval(spawnBubble, 2200);
+  let spawnInterval = 2200;
+  if (STATE.difficulty === 'easy') spawnInterval = 2400;
+  else if (STATE.difficulty === 'medium') spawnInterval = 1800;
+  else if (STATE.difficulty === 'hard') spawnInterval = 1200;
+  bubbleSpawnTimer = setInterval(spawnBubble, spawnInterval);
   
   // Spawn 3 starting bubbles immediately
   setTimeout(spawnBubble, 100);
@@ -844,9 +936,14 @@ function spawnBubble() {
   const bubble = document.createElement('div');
   bubble.className = 'bubble';
   
-  // 35% chance to spawn the target word, otherwise pick random
+  // Chance to spawn the target word scales by difficulty, otherwise pick random
   let wordVal = '';
-  if (Math.random() < 0.35) {
+  let targetChance = 0.35;
+  if (STATE.difficulty === 'easy') targetChance = 0.40;
+  else if (STATE.difficulty === 'medium') targetChance = 0.30;
+  else if (STATE.difficulty === 'hard') targetChance = 0.20;
+
+  if (Math.random() < targetChance) {
     wordVal = bubbleTargetWord;
   } else {
     wordVal = activePool[Math.floor(Math.random() * activePool.length)];
@@ -866,8 +963,15 @@ function spawnBubble() {
   bubble.style.left = `${leftX}px`;
   bubble.style.bottom = `-${size}px`;
   
-  // Ascent Speed (randomized)
-  const speed = Math.random() * 1.2 + 0.8;
+  // Ascent Speed (randomized based on difficulty)
+  let speed = Math.random() * 1.2 + 0.8;
+  if (STATE.difficulty === 'easy') {
+    speed = Math.random() * 1.0 + 0.7;
+  } else if (STATE.difficulty === 'medium') {
+    speed = Math.random() * 1.4 + 1.0;
+  } else if (STATE.difficulty === 'hard') {
+    speed = Math.random() * 2.0 + 1.4;
+  }
   
   bubble.addEventListener('click', () => handleBubbleClick(bubble, wordVal, speed));
   
@@ -989,9 +1093,14 @@ function startGameSafari() {
 
 function generateSafariRound() {
   const activePool = getActiveWordPool();
-  if (activePool.length < 3) return;
+  let stoneCount = 3;
+  if (STATE.difficulty === 'medium') stoneCount = 4;
+  else if (STATE.difficulty === 'hard') stoneCount = 5;
+
+  if (activePool.length < stoneCount) return;
 
   const stonesRow = document.getElementById('safari-stones-row');
+  stonesRow.className = `safari-stones-container stones-${stoneCount}`;
   stonesRow.innerHTML = '';
 
   // Select target word
@@ -1000,10 +1109,10 @@ function generateSafariRound() {
   document.getElementById('safari-target-word').textContent = targetWord;
 
   // Pick distractor words
-  const distractors = activePool.filter(w => w !== targetWord).sort(() => 0.5 - Math.random()).slice(0, 2);
+  const distractors = activePool.filter(w => w !== targetWord).sort(() => 0.5 - Math.random()).slice(0, stoneCount - 1);
   const words = [targetWord, ...distractors].sort(() => 0.5 - Math.random());
 
-  // Generate 3 stones side-by-side inside this round path
+  // Generate stones side-by-side inside this round path
   words.forEach((word) => {
     const col = document.createElement('div');
     col.className = 'stone-column';

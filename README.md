@@ -27,7 +27,17 @@ Securely locked behind a mathematical gateway to prevent accidental modification
 *   **Vocabulary Selection**: Switch active lists between:
     *   *Kindergarten Standard* (Dolch Pre-Primer)
     *   *Kindergarten Advanced* (Dolch Primer)
+    *   *First Grade* (Dolch 1st Grade)
+    *   *Second Grade* (Dolch 2nd Grade)
+    *   *Third Grade* (Dolch 3rd Grade)
+    *   *Nouns* (Dolch Nouns)
     *   *Fry First 100 Words*
+    *   *Fry Second 100 Words*
+    *   *Fry Third 100 Words*
+*   **Gameplay Difficulty Selection**: Toggle between Easy, Medium, and Hard difficulty levels to scale target challenges for children:
+    *   *Easy*: Slower audio speech rate (0.82), 3 card options in assessment discovery, slow bubble pop floating speed/spawn interval, and 3 stepping stones in Safari Path.
+    *   *Medium*: Faster audio speech rate (0.92), 4 card options in assessment discovery, medium bubble speed/spawn interval, and 4 stepping stones in Safari Path.
+    *   *Hard*: Standard audio speech rate (1.02), 5 card options in assessment discovery, rapid bubble speed/spawn interval, and 5 stepping stones in Safari Path.
 *   **Word Rotation Matrix**: View mastered, learning, and un-encountered words. Parents and teachers can toggle individual words to manually enable or disable them in the active rotation.
 *   **Visual Statistics**: Real-time accuracy metrics and mastered/learning counts depicted with a clean, dynamic SVG donut chart.
 *   **Speech Customization**: Toggle voice pitch to synthesize a kid-friendly speech tone.

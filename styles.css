@@ -735,7 +735,8 @@ input:focus, select:focus {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 24px;
+  flex-wrap: wrap; /* Support multi-line layout on wrap */
+  gap: 20px;
   flex-grow: 1;
   padding: 20px;
 }
@@ -757,6 +758,37 @@ input:focus, select:focus {
   transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-align: center;
 }
+
+/* Card sizes scale down for higher difficulty option counts */
+.cards-layout.options-4 .word-card {
+  width: 195px;
+  height: 175px;
+  font-size: 32px;
+  box-shadow: 0 10px 0px #ddd6fe, var(--shadow-md);
+}
+.cards-layout.options-4 .word-card:hover {
+  box-shadow: 0 14px 0px var(--color-primary-light), var(--shadow-lg);
+}
+.cards-layout.options-4 .word-card:active {
+  transform: translateY(6px);
+  box-shadow: 0 4px 0px var(--color-primary-light), var(--shadow-sm);
+}
+
+.cards-layout.options-5 .word-card {
+  width: 170px;
+  height: 150px;
+  font-size: 28px;
+  padding: 20px;
+  box-shadow: 0 8px 0px #ddd6fe, var(--shadow-md);
+}
+.cards-layout.options-5 .word-card:hover {
+  box-shadow: 0 12px 0px var(--color-primary-light), var(--shadow-lg);
+}
+.cards-layout.options-5 .word-card:active {
+  transform: translateY(5px);
+  box-shadow: 0 3px 0px var(--color-primary-light), var(--shadow-sm);
+}
+
 .word-card:hover {
   transform: translateY(-4px);
   border-color: var(--color-primary);
@@ -1033,6 +1065,14 @@ input:focus, select:focus {
   align-items: center;
   z-index: 6;
 }
+.safari-stones-container.stones-4 {
+  left: 14%;
+  right: 14%;
+}
+.safari-stones-container.stones-5 {
+  left: 10%;
+  right: 10%;
+}
 .stone-column {
   display: flex;
   flex-direction: column;
@@ -1057,6 +1097,21 @@ input:focus, select:focus {
   transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   text-align: center;
   padding: 0 10px;
+}
+.safari-stones-container.stones-4 .stone-btn {
+  width: 95px;
+  height: 70px;
+  font-size: 18px;
+}
+.safari-stones-container.stones-5 .stone-btn {
+  width: 85px;
+  height: 65px;
+  font-size: 16px;
+  box-shadow: 0 6px 0px #64748b, 0 10px 8px rgba(0,0,0,0.15);
+}
+.safari-stones-container.stones-5 .stone-btn:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px 0px #64748b;
 }
 .stone-btn:hover {
   transform: translateY(-2px);

@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sight-word-explorer-v1';
+const CACHE_NAME = 'sight-word-explorer-v2';
 const ASSETS = [
   './index.html',
   './styles.css',
