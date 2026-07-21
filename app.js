@@ -95,29 +95,59 @@ const WORD_LISTS = {
   ]
 };
 
-// Available stickers database
+// Available stickers database (35+ stickers across 6 categories with tiered pricing)
 const STICKER_DATABASE = [
   // Space stickers
-  { id: 'rocket', emoji: '🚀', name: 'Spaceship', cost: 5, category: 'space' },
-  { id: 'alien', emoji: '👽', name: 'Alien Friend', cost: 5, category: 'space' },
-  { id: 'astronaut', emoji: '🧑‍🚀', name: 'Astronaut', cost: 5, category: 'space' },
-  { id: 'planet', emoji: '🪐', name: 'Ring Planet', cost: 5, category: 'space' },
-  { id: 'ufo', emoji: '🛸', name: 'Flying Saucer', cost: 5, category: 'space' },
+  { id: 'rocket', emoji: '🚀', name: 'Spaceship', cost: 5, category: 'space', tier: 'common' },
+  { id: 'alien', emoji: '👽', name: 'Alien Friend', cost: 5, category: 'space', tier: 'common' },
+  { id: 'astronaut', emoji: '🧑‍🚀', name: 'Astronaut', cost: 15, category: 'space', tier: 'rare' },
+  { id: 'planet', emoji: '🪐', name: 'Ring Planet', cost: 15, category: 'space', tier: 'rare' },
+  { id: 'ufo', emoji: '🛸', name: 'Flying Saucer', cost: 30, category: 'space', tier: 'epic' },
+  { id: 'star_king', emoji: '🌟', name: 'Golden Star', cost: 50, category: 'space', tier: 'legendary' },
   
   // Jungle stickers
-  { id: 'monkey', emoji: '🐒', name: 'Climbing Monkey', cost: 5, category: 'jungle' },
-  { id: 'banana', emoji: '🍌', name: 'Banana Bunch', cost: 5, category: 'jungle' },
-  { id: 'parrot', emoji: '🦜', name: 'Colorful Parrot', cost: 5, category: 'jungle' },
-  { id: 'palm', emoji: '🌴', name: 'Palm Tree', cost: 5, category: 'jungle' },
-  { id: 'tiger', emoji: '🐅', name: 'Baby Tiger', cost: 5, category: 'jungle' },
+  { id: 'monkey', emoji: '🐒', name: 'Climbing Monkey', cost: 5, category: 'jungle', tier: 'common' },
+  { id: 'banana', emoji: '🍌', name: 'Banana Bunch', cost: 5, category: 'jungle', tier: 'common' },
+  { id: 'palm', emoji: '🌴', name: 'Palm Tree', cost: 5, category: 'jungle', tier: 'common' },
+  { id: 'parrot', emoji: '🦜', name: 'Colorful Parrot', cost: 15, category: 'jungle', tier: 'rare' },
+  { id: 'tiger', emoji: '🐅', name: 'Baby Tiger', cost: 15, category: 'jungle', tier: 'rare' },
+  { id: 'gorilla', emoji: '🦍', name: 'Mighty Gorilla', cost: 30, category: 'jungle', tier: 'epic' },
   
   // Ocean stickers
-  { id: 'fish', emoji: '🐠', name: 'Tropical Fish', cost: 5, category: 'ocean' },
-  { id: 'octopus', emoji: '🐙', name: 'Friendly Octopus', cost: 5, category: 'ocean' },
-  { id: 'shark', emoji: '🦈', name: 'Happy Shark', cost: 5, category: 'ocean' },
-  { id: 'crab', emoji: '🦀', name: 'Tiny Crab', cost: 5, category: 'ocean' },
-  { id: 'sub', emoji: '🤿', name: 'Diver Mask', cost: 5, category: 'ocean' }
+  { id: 'fish', emoji: '🐠', name: 'Tropical Fish', cost: 5, category: 'ocean', tier: 'common' },
+  { id: 'crab', emoji: '🦀', name: 'Tiny Crab', cost: 5, category: 'ocean', tier: 'common' },
+  { id: 'octopus', emoji: '🐙', name: 'Friendly Octopus', cost: 15, category: 'ocean', tier: 'rare' },
+  { id: 'shark', emoji: '🦈', name: 'Happy Shark', cost: 15, category: 'ocean', tier: 'rare' },
+  { id: 'whale', emoji: '🐋', name: 'Giant Whale', cost: 30, category: 'ocean', tier: 'epic' },
+  { id: 'trident', emoji: '🔱', name: 'Ocean Trident', cost: 50, category: 'ocean', tier: 'legendary' },
+
+  // Dino stickers
+  { id: 'stego', emoji: '🦕', name: 'Stegosaurus', cost: 5, category: 'dino', tier: 'common' },
+  { id: 'dino_egg', emoji: '🥚', name: 'Dino Egg', cost: 5, category: 'dino', tier: 'common' },
+  { id: 'trex', emoji: '🦖', name: 'T-Rex', cost: 15, category: 'dino', tier: 'rare' },
+  { id: 'volcano', emoji: '🌋', name: 'Lava Volcano', cost: 30, category: 'dino', tier: 'epic' },
+  { id: 'dino_king', emoji: '👑🦖', name: 'King T-Rex', cost: 50, category: 'dino', tier: 'legendary' },
+
+  // Castle & Fantasy stickers
+  { id: 'wand', emoji: '🪄', name: 'Magic Wand', cost: 5, category: 'castle', tier: 'common' },
+  { id: 'castle_sm', emoji: '🏰', name: 'Fairytale Castle', cost: 15, category: 'castle', tier: 'rare' },
+  { id: 'unicorn', emoji: '🦄', name: 'Rainbow Unicorn', cost: 30, category: 'castle', tier: 'epic' },
+  { id: 'dragon', emoji: '🐉', name: 'Fire Dragon', cost: 50, category: 'castle', tier: 'legendary' },
+
+  // Garage & Vehicle stickers
+  { id: 'racecar', emoji: '🏎️', name: 'Speed Racecar', cost: 5, category: 'garage', tier: 'common' },
+  { id: 'truck', emoji: '🛻', name: 'Monster Truck', cost: 15, category: 'garage', tier: 'rare' },
+  { id: 'helicopter', emoji: '🚁', name: 'Sky Helicopter', cost: 30, category: 'garage', tier: 'epic' },
+  { id: 'gold_car', emoji: '🏆🏎️', name: 'Trophy Car', cost: 50, category: 'garage', tier: 'legendary' }
 ];
+
+// Helper to check audio-only mode display
+function getDisplayTargetWord(word) {
+  if (STATE.audioOnlyMode) {
+    return '??? 🔊';
+  }
+  return word;
+}
 
 // 2. STATE MANAGER
 class GameState {
@@ -125,6 +155,7 @@ class GameState {
     this.playerName = 'Explorer';
     this.stars = 0;
     this.audioEnabled = true;
+    this.audioOnlyMode = false;
     this.activeListKey = 'kindergarten-easy';
     this.voiceKidPitch = true;
     this.difficulty = 'easy';
@@ -136,11 +167,14 @@ class GameState {
     
     // Owned sticker IDs
     this.ownedStickers = ['rocket', 'palm', 'fish']; // starting stickers
-    // Placed stickers in scenes: { "space": [ { id: 'rocket', x: 100, y: 150, scale: 1, rotate: 0 } ] }
+    // Placed stickers in scenes
     this.placedStickers = {
       space: [],
       jungle: [],
-      ocean: []
+      ocean: [],
+      dino: [],
+      castle: [],
+      garage: []
     };
     
     this.load();
@@ -154,13 +188,14 @@ class GameState {
         this.playerName = parsed.playerName || 'Explorer';
         this.stars = typeof parsed.stars === 'number' ? parsed.stars : 0;
         this.audioEnabled = parsed.audioEnabled !== undefined ? parsed.audioEnabled : true;
+        this.audioOnlyMode = parsed.audioOnlyMode !== undefined ? parsed.audioOnlyMode : false;
         this.activeListKey = parsed.activeListKey || 'kindergarten-easy';
         this.voiceKidPitch = parsed.voiceKidPitch !== undefined ? parsed.voiceKidPitch : true;
         this.difficulty = parsed.difficulty || 'easy';
         this.wordStats = parsed.wordStats || {};
         this.disabledWords = parsed.disabledWords || {};
         this.ownedStickers = parsed.ownedStickers || ['rocket', 'palm', 'fish'];
-        this.placedStickers = parsed.placedStickers || { space: [], jungle: [], ocean: [] };
+        this.placedStickers = parsed.placedStickers || { space: [], jungle: [], ocean: [], dino: [], castle: [], garage: [] };
       } catch (e) {
         console.error("Error loading save state", e);
       }
@@ -172,6 +207,7 @@ class GameState {
       playerName: this.playerName,
       stars: this.stars,
       audioEnabled: this.audioEnabled,
+      audioOnlyMode: this.audioOnlyMode,
       activeListKey: this.activeListKey,
       voiceKidPitch: this.voiceKidPitch,
       difficulty: this.difficulty,
@@ -406,7 +442,8 @@ class AppController {
       this.prevScreen = this.currentScreen;
     }
     
-    this.screens.forEach(s => {
+    const allScreens = document.querySelectorAll('.game-screen');
+    allScreens.forEach(s => {
       s.classList.remove('active');
     });
     
@@ -441,7 +478,7 @@ class AppController {
         
       case 'screen-game-selection':
         document.getElementById('hub-player-name').textContent = STATE.playerName;
-        SPEECH.speak("Where do you want to go next? Bubble Pop, Safari Path, or make a sticker scene?");
+        SPEECH.speak("Where do you want to go next? Choose a game or make a sticker scene!");
         break;
         
       case 'screen-game-bubble-pop':
@@ -450,6 +487,18 @@ class AppController {
         
       case 'screen-game-safari':
         startGameSafari();
+        break;
+
+      case 'screen-game-ufo':
+        startGameUFOBeam();
+        break;
+
+      case 'screen-game-memory':
+        startGameMemoryMatch();
+        break;
+
+      case 'screen-game-dino':
+        startGameDinoHatch();
         break;
         
       case 'screen-stickers':
@@ -466,6 +515,18 @@ class AppController {
     else if (STATE.stars >= 30) this.avatarDisplay.textContent = '🚀';
     else if (STATE.stars >= 15) this.avatarDisplay.textContent = '🦁';
     else this.avatarDisplay.textContent = '⭐';
+
+    // Update audio mode button active state
+    const audioBtn = document.getElementById('audio-mode-btn');
+    if (audioBtn) {
+      if (STATE.audioOnlyMode) {
+        audioBtn.classList.add('active');
+        audioBtn.title = "Audio-Only Hard Mode (ACTIVE - Words Hidden)";
+      } else {
+        audioBtn.classList.remove('active');
+        audioBtn.title = "Audio-Only Mode (Hide Words)";
+      }
+    }
   }
 
   initGlobalEvents() {
@@ -474,16 +535,24 @@ class AppController {
       STATE.audioEnabled = !STATE.audioEnabled;
       this.soundBtn.textContent = STATE.audioEnabled ? '🔊' : '🔇';
       STATE.save();
-      
-      // Flash Toast
       showToast(STATE.audioEnabled ? "Sound Enabled!" : "Sound Muted");
     });
     
+    // Audio-Only Mode Toggle Button in Header
+    const audioBtn = document.getElementById('audio-mode-btn');
+    if (audioBtn) {
+      audioBtn.addEventListener('click', () => {
+        STATE.audioOnlyMode = !STATE.audioOnlyMode;
+        STATE.save();
+        this.updateStarsUI();
+        showToast(STATE.audioOnlyMode ? "Audio-Only Hard Mode ON 👂 (Words Hidden)" : "Normal Mode ON 👁️ (Words Visible)");
+      });
+    }
+
     // Parent Gate Entrance
     document.getElementById('parent-lock-btn').addEventListener('click', () => {
-      // Setup random equation
-      const val1 = Math.floor(Math.random() * 5) + 3; // 3-7
-      const val2 = Math.floor(Math.random() * 5) + 2; // 2-6
+      const val1 = Math.floor(Math.random() * 5) + 3;
+      const val2 = Math.floor(Math.random() * 5) + 2;
       const isAdd = Math.random() > 0.3;
       
       let answer, questionStr;
@@ -491,7 +560,6 @@ class AppController {
         answer = val1 + val2;
         questionStr = `${val1} + ${val2} = ?`;
       } else {
-        answer = val1 + val2 - val2; // avoid negative
         questionStr = `${val1 + val2} - ${val2} = ?`;
         answer = val1;
       }
@@ -536,7 +604,6 @@ class AppController {
       STATE.save();
       this.updateStarsUI();
       
-      // Determine if they've ever completed an assessment or have any data
       const playedCount = Object.keys(STATE.wordStats).length;
       if (playedCount === 0) {
         this.navigateTo('screen-assessment-init');
@@ -556,6 +623,15 @@ class AppController {
     });
     document.getElementById('hub-goto-safari').addEventListener('click', () => {
       this.navigateTo('screen-game-safari');
+    });
+    document.getElementById('hub-goto-ufo').addEventListener('click', () => {
+      this.navigateTo('screen-game-ufo');
+    });
+    document.getElementById('hub-goto-memory').addEventListener('click', () => {
+      this.navigateTo('screen-game-memory');
+    });
+    document.getElementById('hub-goto-dino').addEventListener('click', () => {
+      this.navigateTo('screen-game-dino');
     });
     document.getElementById('hub-goto-stickers').addEventListener('click', () => {
       this.navigateTo('screen-stickers');
@@ -775,6 +851,17 @@ function setupDashboard() {
   const kidPitchCheck = document.getElementById('voice-gender');
   kidPitchCheck.checked = STATE.voiceKidPitch;
 
+  // Checkbox Audio-Only
+  const audioOnlyToggle = document.getElementById('audio-only-toggle');
+  if (audioOnlyToggle) {
+    audioOnlyToggle.checked = STATE.audioOnlyMode;
+    audioOnlyToggle.onchange = (e) => {
+      STATE.audioOnlyMode = e.target.checked;
+      STATE.save();
+      APP.updateStarsUI();
+    };
+  }
+
   // Reset Listeners
   lvlSel.onchange = (e) => {
     STATE.activeListKey = e.target.value;
@@ -856,42 +943,42 @@ let bubbleSpawnTimer = null;
 let bubbleTargetWord = '';
 let bubbleEarnedStars = 0;
 let bubbleCorrectStreak = 0;
+let bubbleLevel = 1;
+let bubblesPoppedInLevel = 0;
 const BUBBLES_ON_SCREEN = [];
 
 function startGameBubblePop() {
   bubbleGameActive = true;
   bubbleEarnedStars = 0;
   bubbleCorrectStreak = 0;
+  bubbleLevel = 1;
+  bubblesPoppedInLevel = 0;
+
   document.getElementById('bubble-earned-stars').textContent = bubbleEarnedStars;
-  
+  document.getElementById('bubble-level-display').textContent = `Level ${bubbleLevel}/5`;
+
   const canvas = document.getElementById('bubble-canvas');
-  // Clear any existing items
   canvas.querySelectorAll('.bubble').forEach(b => b.remove());
   BUBBLES_ON_SCREEN.length = 0;
-  
-  // Set first target word
+
   chooseNextBubbleTarget();
 
-  // Back button
   document.getElementById('bubble-back-btn').onclick = () => {
     stopGameBubblePop();
     APP.navigateTo('screen-game-selection');
   };
 
-  // Start spawn intervals
   if (bubbleSpawnTimer) clearInterval(bubbleSpawnTimer);
   let spawnInterval = 2200;
   if (STATE.difficulty === 'easy') spawnInterval = 2400;
   else if (STATE.difficulty === 'medium') spawnInterval = 1800;
   else if (STATE.difficulty === 'hard') spawnInterval = 1200;
   bubbleSpawnTimer = setInterval(spawnBubble, spawnInterval);
-  
-  // Spawn 3 starting bubbles immediately
+
   setTimeout(spawnBubble, 100);
   setTimeout(spawnBubble, 800);
   setTimeout(spawnBubble, 1500);
 
-  // Setup loop
   requestAnimationFrame(updateBubblePhysics);
 }
 
@@ -899,18 +986,17 @@ function chooseNextBubbleTarget() {
   const activePool = getActiveWordPool();
   if (activePool.length === 0) return;
   
-  // Prefer words that are in "learning" mode or "new" mode
   const weightedList = [];
   activePool.forEach(w => {
     const status = STATE.getWordStatus(w);
-    if (status === 'new') weightedList.push(w, w); // double weight
-    else if (status === 'learning') weightedList.push(w, w, w); // triple weight
-    else weightedList.push(w); // standard weight
+    if (status === 'new') weightedList.push(w, w);
+    else if (status === 'learning') weightedList.push(w, w, w);
+    else weightedList.push(w);
   });
 
   const nextWord = weightedList[Math.floor(Math.random() * weightedList.length)];
   bubbleTargetWord = nextWord;
-  document.getElementById('bubble-target-word').textContent = nextWord;
+  document.getElementById('bubble-target-word').textContent = getDisplayTargetWord(nextWord);
   
   speakBubbleTarget();
 
@@ -936,7 +1022,6 @@ function spawnBubble() {
   const bubble = document.createElement('div');
   bubble.className = 'bubble';
   
-  // Chance to spawn the target word scales by difficulty, otherwise pick random
   let wordVal = '';
   let targetChance = 0.35;
   if (STATE.difficulty === 'easy') targetChance = 0.40;
@@ -951,19 +1036,16 @@ function spawnBubble() {
 
   bubble.textContent = wordVal;
   
-  // Bubble Dimension (75px to 105px)
   const size = Math.floor(Math.random() * 30) + 75;
   bubble.style.width = `${size}px`;
   bubble.style.height = `${size}px`;
   bubble.style.fontSize = `${Math.floor(size * 0.22)}px`;
   
-  // Spawn horizontally inside container limits
   const canvasWidth = canvas.clientWidth || 800;
   const leftX = Math.random() * (canvasWidth - size - 40) + 20;
   bubble.style.left = `${leftX}px`;
   bubble.style.bottom = `-${size}px`;
   
-  // Ascent Speed (randomized based on difficulty)
   let speed = Math.random() * 1.2 + 0.8;
   if (STATE.difficulty === 'easy') {
     speed = Math.random() * 1.0 + 0.7;
@@ -993,7 +1075,6 @@ function updateBubblePhysics() {
     b.bottom += b.speed;
     b.el.style.bottom = `${b.bottom}px`;
     
-    // Check top bound collision
     const canvasHeight = document.getElementById('bubble-canvas').clientHeight || 500;
     if (b.bottom > canvasHeight) {
       b.el.remove();
@@ -1010,11 +1091,9 @@ function handleBubbleClick(bubbleEl, wordVal, speed) {
   const isCorrect = (wordVal === bubbleTargetWord);
   STATE.recordAnswer(bubbleTargetWord, isCorrect);
   
-  // Pop Visual triggers
   bubbleEl.classList.add('popped');
   setTimeout(() => bubbleEl.remove(), 200);
 
-  // Remove from tracking array
   const trackIdx = BUBBLES_ON_SCREEN.findIndex(b => b.el === bubbleEl);
   if (trackIdx !== -1) {
     BUBBLES_ON_SCREEN.splice(trackIdx, 1);
@@ -1023,29 +1102,46 @@ function handleBubbleClick(bubbleEl, wordVal, speed) {
   if (isCorrect) {
     bubbleEarnedStars++;
     bubbleCorrectStreak++;
+    bubblesPoppedInLevel++;
     document.getElementById('bubble-earned-stars').textContent = bubbleEarnedStars;
     
-    // Add real global stars
     STATE.stars++;
     STATE.save();
     APP.updateStarsUI();
     
-    // Play celebratory sound if hit streak
-    if (bubbleCorrectStreak % 3 === 0) {
+    if (bubblesPoppedInLevel >= 5) {
+      if (bubbleLevel < 5) {
+        bubbleLevel++;
+        bubblesPoppedInLevel = 0;
+        document.getElementById('bubble-level-display').textContent = `Level ${bubbleLevel}/5`;
+        SOUNDS.playFanfare();
+        showToast(`🎉 Level ${bubbleLevel - 1} Complete! +5 Bonus Stars ⭐`);
+        STATE.stars += 5;
+        STATE.save();
+        APP.updateStarsUI();
+      } else {
+        stopGameBubblePop();
+        SOUNDS.playFanfare();
+        STATE.stars += 10;
+        STATE.save();
+        APP.updateStarsUI();
+        SPEECH.speak(`Hooray! You completed all 5 levels of Bubble Pop! You earned 10 bonus stars!`);
+        showToast("🏆 You completed all 5 levels! +10 Bonus Stars! 🌟");
+        setTimeout(() => {
+          APP.navigateTo('screen-game-selection');
+        }, 3000);
+        return;
+      }
+    } else if (bubbleCorrectStreak % 3 === 0) {
       SOUNDS.playChime();
       showToast(`${bubbleCorrectStreak} Correct Words in a row! ⭐`);
     }
 
-    // Change Target Word immediately
     chooseNextBubbleTarget();
   } else {
-    // Punish streak
     bubbleCorrectStreak = 0;
     SOUNDS.playError();
-    
-    // Spawn secondary target bubble to help them find it
     setTimeout(() => {
-      // Prompt repeat guidance
       speakBubbleTarget();
     }, 500);
   }
@@ -1063,7 +1159,7 @@ function stopGameBubblePop() {
 
 // 9. SAFARI PATH GAME ENGINE
 let safariTargetWord = '';
-let safariLevelIndex = 0; // max 4 path rounds
+let safariLevelIndex = 0;
 let safariEarnedStars = 0;
 
 function startGameSafari() {
@@ -1071,18 +1167,15 @@ function startGameSafari() {
   safariEarnedStars = 0;
   document.getElementById('safari-earned-stars').textContent = safariEarnedStars;
 
-  // Move character to beginning
   const char = document.getElementById('safari-character');
   char.style.left = '5%';
   char.style.bottom = '12%';
   char.classList.remove('jumping');
 
-  // Back button
   document.getElementById('safari-back-btn').onclick = () => {
     APP.navigateTo('screen-game-selection');
   };
 
-  // Close treasure chest
   const chest = document.getElementById('safari-treasure');
   chest.className = 'treasure-chest';
   chest.textContent = '🎁';
@@ -1103,16 +1196,13 @@ function generateSafariRound() {
   stonesRow.className = `safari-stones-container stones-${stoneCount}`;
   stonesRow.innerHTML = '';
 
-  // Select target word
   const targetWord = activePool[Math.floor(Math.random() * activePool.length)];
   safariTargetWord = targetWord;
-  document.getElementById('safari-target-word').textContent = targetWord;
+  document.getElementById('safari-target-word').textContent = getDisplayTargetWord(targetWord);
 
-  // Pick distractor words
   const distractors = activePool.filter(w => w !== targetWord).sort(() => 0.5 - Math.random()).slice(0, stoneCount - 1);
   const words = [targetWord, ...distractors].sort(() => 0.5 - Math.random());
 
-  // Generate stones side-by-side inside this round path
   words.forEach((word) => {
     const col = document.createElement('div');
     col.className = 'stone-column';
@@ -1130,7 +1220,6 @@ function generateSafariRound() {
     speakSafariTarget();
   }, 400);
 
-  // Repeat button
   const repBtn = document.getElementById('safari-repeat-btn');
   const newBtn = repBtn.cloneNode(true);
   repBtn.replaceWith(newBtn);
@@ -1148,22 +1237,19 @@ function handleSafariStoneChoice(stoneEl, wordVal) {
   STATE.recordAnswer(safariTargetWord, isCorrect);
 
   if (isCorrect) {
-    // Disable interactions
     stones.forEach(s => s.style.pointerEvents = 'none');
     stoneEl.classList.add('correct');
     
-    // Jump character to correct stone
     const char = document.getElementById('safari-character');
     char.classList.add('jumping');
     
-    // Calculate position
     const rect = stoneEl.getBoundingClientRect();
     const parentRect = document.getElementById('safari-canvas').getBoundingClientRect();
     const targetLeft = rect.left - parentRect.left + (rect.width/2) - 40;
     
     setTimeout(() => {
       char.style.left = `${targetLeft}px`;
-      char.style.bottom = '42%'; // Jump onto stone row
+      char.style.bottom = '42%';
     }, 100);
 
     SOUNDS.playChime();
@@ -1179,10 +1265,8 @@ function handleSafariStoneChoice(stoneEl, wordVal) {
       APP.updateStarsUI();
 
       if (safariLevelIndex >= 4) {
-        // Complete Safari - jump to treasure chest!
         finishSafariGame();
       } else {
-        // Reset lion slightly and launch next round
         setTimeout(() => {
           char.style.left = '5%';
           char.style.bottom = '12%';
@@ -1192,11 +1276,8 @@ function handleSafariStoneChoice(stoneEl, wordVal) {
     }, 600);
 
   } else {
-    // Incorrect choice
     stoneEl.classList.add('incorrect');
     SOUNDS.playError();
-    
-    // Re-prompt instructions
     setTimeout(() => {
       speakSafariTarget();
     }, 500);
@@ -1207,12 +1288,10 @@ function finishSafariGame() {
   const char = document.getElementById('safari-character');
   const chest = document.getElementById('safari-treasure');
   
-  // Jump to chest
   char.classList.add('jumping');
   char.style.left = '82%';
   char.style.bottom = '40%';
   
-  // Empty stones
   document.getElementById('safari-stones-row').innerHTML = '<div class="canvas-instructions">You reached the end! Open the treasure box!</div>';
 
   setTimeout(() => {
@@ -1220,12 +1299,10 @@ function finishSafariGame() {
     SOUNDS.playFanfare();
     SPEECH.speak("Hooray! You crossed the river! Click the box to open your prize!");
     
-    // Active treasure chest click
     chest.onclick = () => {
       chest.textContent = '🔓✨';
       chest.classList.add('open');
       
-      // Award big stars payout (+10 additional bonus stars)
       STATE.stars += 10;
       safariEarnedStars += 10;
       document.getElementById('safari-earned-stars').textContent = safariEarnedStars;
@@ -1238,7 +1315,6 @@ function finishSafariGame() {
       
       SPEECH.speak("Incredible job! Go play again or custom create in the Sticker Scene!");
       
-      // Route back after a short delay
       setTimeout(() => {
         APP.navigateTo('screen-game-selection');
       }, 3500);
@@ -1246,18 +1322,314 @@ function finishSafariGame() {
   }, 600);
 }
 
+// 10. UFO SPACE BEAM GAME ENGINE
+let ufoGameActive = false;
+let ufoTargetWord = '';
+let ufoRoundIndex = 0;
+let ufoEarnedStars = 0;
 
-// 10. STICKER SCENE CREATOR PIPELINE
+function startGameUFOBeam() {
+  ufoGameActive = true;
+  ufoRoundIndex = 1;
+  ufoEarnedStars = 0;
+  document.getElementById('ufo-earned-stars').textContent = ufoEarnedStars;
+  document.getElementById('ufo-level-display').textContent = `Round 1/5`;
+
+  document.getElementById('ufo-back-btn').onclick = () => {
+    ufoGameActive = false;
+    APP.navigateTo('screen-game-selection');
+  };
+
+  generateUFORound();
+}
+
+function generateUFORound() {
+  if (!ufoGameActive) return;
+  const activePool = getActiveWordPool();
+  let crystalCount = 3;
+  if (STATE.difficulty === 'medium') crystalCount = 4;
+  else if (STATE.difficulty === 'hard') crystalCount = 5;
+
+  if (activePool.length < crystalCount) return;
+
+  const container = document.getElementById('ufo-crystals-container');
+  container.innerHTML = '';
+  const ray = document.getElementById('ufo-beam-ray');
+  ray.classList.remove('active');
+
+  const targetWord = activePool[Math.floor(Math.random() * activePool.length)];
+  ufoTargetWord = targetWord;
+  document.getElementById('ufo-target-word').textContent = getDisplayTargetWord(targetWord);
+
+  const distractors = activePool.filter(w => w !== targetWord).sort(() => 0.5 - Math.random()).slice(0, crystalCount - 1);
+  const words = [targetWord, ...distractors].sort(() => 0.5 - Math.random());
+
+  words.forEach(word => {
+    const crystal = document.createElement('div');
+    crystal.className = 'ufo-crystal';
+    crystal.textContent = word;
+    crystal.addEventListener('click', () => handleUFOCrystalChoice(crystal, word));
+    container.appendChild(crystal);
+  });
+
+  setTimeout(() => speakUFOTarget(), 400);
+
+  const repBtn = document.getElementById('ufo-repeat-btn');
+  const newBtn = repBtn.cloneNode(true);
+  repBtn.replaceWith(newBtn);
+  newBtn.addEventListener('click', speakUFOTarget);
+}
+
+function speakUFOTarget() {
+  SPEECH.speak(`Beam up the word: ${ufoTargetWord}`);
+}
+
+function handleUFOCrystalChoice(crystalEl, wordVal) {
+  const crystals = document.querySelectorAll('.ufo-crystal');
+  const isCorrect = (wordVal === ufoTargetWord);
+  STATE.recordAnswer(ufoTargetWord, isCorrect);
+
+  if (isCorrect) {
+    crystals.forEach(c => c.style.pointerEvents = 'none');
+    
+    const ray = document.getElementById('ufo-beam-ray');
+    ray.classList.add('active');
+    crystalEl.classList.add('beamed');
+
+    SOUNDS.playChime();
+    ufoEarnedStars += 2;
+    STATE.stars += 2;
+    STATE.save();
+    APP.updateStarsUI();
+    document.getElementById('ufo-earned-stars').textContent = ufoEarnedStars;
+
+    setTimeout(() => {
+      ray.classList.remove('active');
+      if (ufoRoundIndex < 5) {
+        ufoRoundIndex++;
+        document.getElementById('ufo-level-display').textContent = `Round ${ufoRoundIndex}/5`;
+        generateUFORound();
+      } else {
+        SOUNDS.playFanfare();
+        STATE.stars += 10;
+        STATE.save();
+        APP.updateStarsUI();
+        SPEECH.speak("Cosmic victory! You beamed up all 5 space crystals!");
+        showToast("🛸 UFO Mission Complete! +10 Bonus Stars! 🌟");
+        setTimeout(() => APP.navigateTo('screen-game-selection'), 3000);
+      }
+    }, 1000);
+  } else {
+    SOUNDS.playError();
+    crystalEl.style.opacity = '0.4';
+    setTimeout(() => speakUFOTarget(), 500);
+  }
+}
+
+// 11. SIGHT WORD MEMORY MATCH ENGINE
+let memoryFlippedCards = [];
+let memoryMatchedPairs = 0;
+let memoryEarnedStars = 0;
+
+function startGameMemoryMatch() {
+  memoryFlippedCards = [];
+  memoryMatchedPairs = 0;
+  memoryEarnedStars = 0;
+  document.getElementById('memory-earned-stars').textContent = memoryEarnedStars;
+  document.getElementById('memory-matches-display').textContent = `Pairs Found: 0/4`;
+
+  document.getElementById('memory-back-btn').onclick = () => {
+    APP.navigateTo('screen-game-selection');
+  };
+
+  loadMemoryBoard();
+}
+
+function loadMemoryBoard() {
+  const activePool = getActiveWordPool();
+  if (activePool.length < 4) return;
+
+  const board = document.getElementById('memory-board');
+  board.innerHTML = '';
+
+  const selectedWords = [...activePool].sort(() => 0.5 - Math.random()).slice(0, 4);
+  const deck = [...selectedWords, ...selectedWords].sort(() => 0.5 - Math.random());
+
+  deck.forEach((word) => {
+    const card = document.createElement('div');
+    card.className = 'memory-card';
+    card.innerHTML = `
+      <div class="memory-card-inner">
+        <div class="memory-card-front">❓</div>
+        <div class="memory-card-back">${word}</div>
+      </div>
+    `;
+
+    card.addEventListener('click', () => handleMemoryCardClick(card, word));
+    board.appendChild(card);
+  });
+
+  SPEECH.speak("Find matching sight word pairs!");
+}
+
+function handleMemoryCardClick(cardEl, word) {
+  if (cardEl.classList.contains('flipped') || cardEl.classList.contains('matched') || memoryFlippedCards.length >= 2) {
+    return;
+  }
+
+  cardEl.classList.add('flipped');
+  SPEECH.speak(word);
+  memoryFlippedCards.push({ el: cardEl, word: word });
+
+  if (memoryFlippedCards.length === 2) {
+    const [c1, c2] = memoryFlippedCards;
+    if (c1.word === c2.word) {
+      SOUNDS.playChime();
+      c1.el.classList.add('matched');
+      c2.el.classList.add('matched');
+      memoryFlippedCards = [];
+      memoryMatchedPairs++;
+      memoryEarnedStars += 2;
+      STATE.stars += 2;
+      STATE.save();
+      APP.updateStarsUI();
+
+      document.getElementById('memory-earned-stars').textContent = memoryEarnedStars;
+      document.getElementById('memory-matches-display').textContent = `Pairs Found: ${memoryMatchedPairs}/4`;
+
+      STATE.recordAnswer(word, true);
+
+      if (memoryMatchedPairs >= 4) {
+        setTimeout(() => {
+          SOUNDS.playFanfare();
+          STATE.stars += 10;
+          STATE.save();
+          APP.updateStarsUI();
+          SPEECH.speak("Super Memory! You matched all pairs!");
+          showToast("🃏 Memory Master! +10 Bonus Stars! 🌟");
+          setTimeout(() => APP.navigateTo('screen-game-selection'), 3000);
+        }, 600);
+      }
+    } else {
+      SOUNDS.playError();
+      setTimeout(() => {
+        c1.el.classList.remove('flipped');
+        c2.el.classList.remove('flipped');
+        memoryFlippedCards = [];
+      }, 1100);
+    }
+  }
+}
+
+// 12. DINO EGG HATCH GAME ENGINE
+let dinoTargetWord = '';
+let dinoHatchedCount = 0;
+let dinoEarnedStars = 0;
+
+function startGameDinoHatch() {
+  dinoHatchedCount = 0;
+  dinoEarnedStars = 0;
+  document.getElementById('dino-earned-stars').textContent = dinoEarnedStars;
+  document.getElementById('dino-level-display').textContent = `Hatched: 0/5`;
+
+  document.getElementById('dino-back-btn').onclick = () => {
+    APP.navigateTo('screen-game-selection');
+  };
+
+  generateDinoRound();
+}
+
+function generateDinoRound() {
+  const activePool = getActiveWordPool();
+  let eggCount = 3;
+  if (STATE.difficulty === 'medium') eggCount = 4;
+  else if (STATE.difficulty === 'hard') eggCount = 5;
+
+  if (activePool.length < eggCount) return;
+
+  const container = document.getElementById('dino-eggs-row');
+  container.innerHTML = '';
+
+  const targetWord = activePool[Math.floor(Math.random() * activePool.length)];
+  dinoTargetWord = targetWord;
+  document.getElementById('dino-target-word').textContent = getDisplayTargetWord(targetWord);
+
+  const distractors = activePool.filter(w => w !== targetWord).sort(() => 0.5 - Math.random()).slice(0, eggCount - 1);
+  const words = [targetWord, ...distractors].sort(() => 0.5 - Math.random());
+
+  words.forEach(word => {
+    const egg = document.createElement('div');
+    egg.className = 'dino-egg';
+    egg.textContent = word;
+    egg.addEventListener('click', () => handleDinoEggChoice(egg, word));
+    container.appendChild(egg);
+  });
+
+  setTimeout(() => speakDinoTarget(), 400);
+
+  const repBtn = document.getElementById('dino-repeat-btn');
+  const newBtn = repBtn.cloneNode(true);
+  repBtn.replaceWith(newBtn);
+  newBtn.addEventListener('click', speakDinoTarget);
+}
+
+function speakDinoTarget() {
+  SPEECH.speak(`Find and hatch: ${dinoTargetWord}`);
+}
+
+function handleDinoEggChoice(eggEl, wordVal) {
+  const eggs = document.querySelectorAll('.dino-egg');
+  const isCorrect = (wordVal === dinoTargetWord);
+  STATE.recordAnswer(dinoTargetWord, isCorrect);
+
+  if (isCorrect) {
+    eggs.forEach(e => e.style.pointerEvents = 'none');
+    SOUNDS.playPop();
+
+    eggEl.classList.add('hatched');
+    const dinos = ['🦖', '🦕', '🐊', '🐢'];
+    const cuteDino = dinos[Math.floor(Math.random() * dinos.length)];
+    eggEl.innerHTML = `<div class="baby-dino-hatched">${cuteDino}</div>`;
+
+    SOUNDS.playChime();
+    dinoHatchedCount++;
+    dinoEarnedStars += 2;
+    STATE.stars += 2;
+    STATE.save();
+    APP.updateStarsUI();
+
+    document.getElementById('dino-earned-stars').textContent = dinoEarnedStars;
+    document.getElementById('dino-level-display').textContent = `Hatched: ${dinoHatchedCount}/5`;
+
+    setTimeout(() => {
+      if (dinoHatchedCount < 5) {
+        generateDinoRound();
+      } else {
+        SOUNDS.playFanfare();
+        STATE.stars += 10;
+        STATE.save();
+        APP.updateStarsUI();
+        SPEECH.speak("Roar! Fantastic job! You hatched 5 baby dinosaurs!");
+        showToast("🥚 Jurassic Champion! +10 Bonus Stars! 🌟");
+        setTimeout(() => APP.navigateTo('screen-game-selection'), 3000);
+      }
+    }, 1200);
+  } else {
+    SOUNDS.playError();
+    eggEl.style.opacity = '0.4';
+    setTimeout(() => speakDinoTarget(), 500);
+  }
+}
+
+// 13. STICKER SCENE CREATOR PIPELINE
 let activeScene = 'space';
 let selectedStickerElement = null;
 
 function setupStickersScreen() {
-  // Setup Back navigation
   document.getElementById('stickers-back-btn').onclick = () => {
     APP.navigateTo('screen-game-selection');
   };
 
-  // Scene Selector drop change
   const sceneSel = document.getElementById('scene-selector');
   sceneSel.value = activeScene;
   updateStickersWorkspaceBackground();
@@ -1268,7 +1640,6 @@ function setupStickersScreen() {
     loadPlacedStickers();
   };
 
-  // Clear scene
   document.getElementById('clear-scene-btn').onclick = () => {
     if (confirm("Do you want to clear all stickers from this scene?")) {
       STATE.placedStickers[activeScene] = [];
@@ -1277,7 +1648,6 @@ function setupStickersScreen() {
     }
   };
 
-  // Tab Setup
   const tabBuy = document.getElementById('tab-buy');
   const tabMy = document.getElementById('tab-my');
   const shelfBuy = document.getElementById('shelf-buy-stickers');
@@ -1297,12 +1667,10 @@ function setupStickersScreen() {
     shelfBuy.classList.remove('active');
   };
 
-  // Load inventory
   renderStickerShopShelf();
   renderStickerOwnedShelf();
   loadPlacedStickers();
 
-  // Click canvas background deselects active sticker
   document.getElementById('stickers-canvas').addEventListener('pointerdown', (e) => {
     if (e.target.id === 'stickers-canvas' || e.target.id === 'canvas-empty-hint') {
       deselectSticker();
@@ -1329,6 +1697,7 @@ function renderStickerShopShelf() {
     }
 
     item.innerHTML = `
+      <span class="tier-badge tier-${sticker.tier}">${sticker.tier}</span>
       <div class="sticker-item-icon">${sticker.emoji}</div>
       <div class="sticker-cost">${isOwned ? 'Owned' : `${sticker.cost} ⭐`}</div>
     `;

@@ -8,15 +8,29 @@ The application is optimized to run smoothly on low-resource environments such a
 
 ## ✨ Features
 
-### 🎮 Kid-Friendly Learning Games
-*   **Bubble Pop 🫧**: Floating bubbles rise from the bottom of the screen. Children listen to the target sight word and pop the correct bubble to earn stars.
-*   **Safari Path 🦁**: Help *Leo the Lion* cross a river by stepping on the correct sight word stepping stones.
+### 🎮 Kid-Friendly Learning Games (5 Interactive Minigames!)
+*   **Bubble Pop 🫧**: Floating bubbles rise from the bottom of the screen. Now features a 5-level structured progression with level-up bonus stars and victory fanfare.
+*   **Safari Path 🦁**: Help *Leo the Lion* cross a river by stepping on sight word stones. Features a slow, smooth floating reward present gliding across the screen for easy tapping.
+*   **UFO Space Beam 🛸**: Beam up glowing cosmic space crystals carrying sight words into a hovering alien spaceship using tractor beam particle rays.
+*   **Memory Match 🃏**: Flip 3D cards, hear spoken sight words, and match word pairs.
+*   **Dino Egg Hatch 🥚**: Listen carefully to spoken words and tap nested speckled dino eggs to crack them open and hatch cute baby dinos.
 *   **Interactive Sound Effects**: Implements retro 8-bit sound effects (pops, chimes, and buzzes) generated entirely offline.
 
+### 👂 Audio-Only Hard Mode (Sound Master)
+*   Toggle Audio-Only Mode in Parent Settings or directly via the header 👂 button.
+*   Hides written target words (`??? 🔊`) across all minigames, requiring children to rely purely on sound and auditory recognition.
+
 ### 🎨 Sticker Scene Creator (Reward System)
-*   Children earn stars by answering questions correctly.
-*   Stars can be spent in the **Sticker Shop** to unlock cute, kid-friendly stickers (Space, Jungle, and Ocean categories).
-*   Unlocked stickers can be dragged, dropped, scaled, and rotated onto customizable themed scenes (🌌 Cosmic Space, 🌳 Deep Jungle, 🐠 Blue Ocean).
+*   Children earn stars by answering questions correctly and completing game levels.
+*   Stars can be spent in the **Sticker Shop** with an expanded catalog of 35+ items across 6 categories:
+    *   🌌 **Space** 🚀
+    *   🌳 **Jungle** 🐒
+    *   🐠 **Ocean** 🐬
+    *   🦖 **Dino Valley** 🦕
+    *   🏰 **Fairytale Castle** 🦄
+    *   🏎️ **Turbo Track / Vehicles** 🛻
+*   Features tiered pricing to keep children motivated: **Common (5⭐)**, **Rare (15⭐)**, **Epic (30⭐)**, and **Legendary (50⭐)**.
+*   Unlocked stickers can be dragged, dropped, scaled, and rotated onto custom interactive scene backgrounds.
 
 ### 📝 Adaptive Initial Discovery Assessment
 *   Starts with an initial assessment challenge to gauge the child's starting point.

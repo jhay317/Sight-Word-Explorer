@@ -38,6 +38,7 @@
       </div>
       <div class="header-buttons">
         <button id="sound-btn" class="icon-btn" aria-label="Toggle Sound" title="Toggle Sound">🔊</button>
+        <button id="audio-mode-btn" class="icon-btn" aria-label="Audio-Only Mode" title="Audio-Only Mode (Hide Words)">👂</button>
         <button id="parent-lock-btn" class="btn btn-secondary btn-sm">Parent Area</button>
       </div>
     </header>
@@ -139,6 +140,10 @@
                   <input type="checkbox" id="voice-gender" checked>
                   <label for="voice-gender">Use High-Pitch Kid-Friendly Voice Pitch</label>
                 </div>
+                <div class="control-group check-group">
+                  <input type="checkbox" id="audio-only-toggle">
+                  <label for="audio-only-toggle">Audio-Only Hard Mode (Hide target word text)</label>
+                </div>
                 <div class="button-row">
                   <button id="db-export-csv" class="btn btn-info">📊 Export Progress (CSV)</button>
                   <button id="db-reset-progress" class="btn btn-danger">⚠️ Reset Child Progress</button>
@@ -217,7 +222,7 @@
               <div class="hub-card-icon bubble-glow">🫧</div>
               <h3>Bubble Pop</h3>
               <p>Pop the correct bubbles floating up into the sky!</p>
-              <button class="btn btn-primary">Play! 🫧</button>
+              <button class="btn btn-primary" onclick="if(window.APP) APP.navigateTo('screen-game-bubble-pop')">Play! 🫧</button>
             </div>
 
             <!-- Game 2: Safari Path -->
@@ -225,7 +230,31 @@
               <div class="hub-card-icon safari-glow">🦁</div>
               <h3>Safari Path</h3>
               <p>Help Leo the Lion cross the river by stepping on the correct words!</p>
-              <button class="btn btn-primary">Play! 🦁</button>
+              <button class="btn btn-primary" onclick="if(window.APP) APP.navigateTo('screen-game-safari')">Play! 🦁</button>
+            </div>
+
+            <!-- Game 3: UFO Space Beam -->
+            <div class="hub-card" id="hub-goto-ufo">
+              <div class="hub-card-icon ufo-glow">🛸</div>
+              <h3>UFO Space Beam</h3>
+              <p>Beam up cosmic space crystals with matching words into the UFO!</p>
+              <button class="btn btn-primary" onclick="if(window.APP) APP.navigateTo('screen-game-ufo')">Play! 🛸</button>
+            </div>
+
+            <!-- Game 4: Sight Word Memory Match -->
+            <div class="hub-card" id="hub-goto-memory">
+              <div class="hub-card-icon memory-glow">🃏</div>
+              <h3>Memory Match</h3>
+              <p>Flip cards, hear spoken words, and match word pairs!</p>
+              <button class="btn btn-primary" onclick="if(window.APP) APP.navigateTo('screen-game-memory')">Play! 🃏</button>
+            </div>
+
+            <!-- Game 5: Dino Egg Hatch -->
+            <div class="hub-card" id="hub-goto-dino">
+              <div class="hub-card-icon dino-glow">🥚</div>
+              <h3>Dino Egg Hatch</h3>
+              <p>Listen carefully and tap the right egg to hatch baby dinos!</p>
+              <button class="btn btn-primary" onclick="if(window.APP) APP.navigateTo('screen-game-dino')">Play! 🥚</button>
             </div>
 
             <!-- Shop: Sticker Book -->
@@ -233,7 +262,7 @@
               <div class="hub-card-icon sticker-glow">🎨</div>
               <h3>Sticker Scene</h3>
               <p>Spend your stars to unlock stickers and build your custom play screen!</p>
-              <button class="btn btn-secondary">Create! 🎨</button>
+              <button class="btn btn-secondary" onclick="if(window.APP) APP.navigateTo('screen-stickers')">Create! 🎨</button>
             </div>
           </div>
         </div>
@@ -249,6 +278,9 @@
               <span>Find the word:</span>
               <span id="bubble-target-word" class="target-word-display">...</span>
               <button id="bubble-repeat-btn" class="speech-repeat-btn inline-btn" aria-label="Listen Again" title="Listen Again">🔊</button>
+            </div>
+            <div class="level-indicator-pill">
+              <span id="bubble-level-display">Level 1/5</span>
             </div>
             <div class="score-stars-display">
               ⭐ <span id="bubble-earned-stars">0</span>
@@ -324,7 +356,84 @@
         </div>
       </section>
 
-      <!-- SCREEN 10: Sticker Scene Creator -->
+      <!-- SCREEN 10: Game 3 - UFO Space Beam -->
+      <section id="screen-game-ufo" class="game-screen">
+        <div class="game-layout">
+          <div class="game-header">
+            <button id="ufo-back-btn" class="btn btn-secondary btn-sm">← Back</button>
+            <div class="ufo-target-instruction">
+              <span>Beam up the word:</span>
+              <span id="ufo-target-word" class="target-word-display">...</span>
+              <button id="ufo-repeat-btn" class="speech-repeat-btn inline-btn" aria-label="Listen Again" title="Listen Again">🔊</button>
+            </div>
+            <div class="level-indicator-pill">
+              <span id="ufo-level-display">Round 1/5</span>
+            </div>
+            <div class="score-stars-display">
+              ⭐ <span id="ufo-earned-stars">0</span>
+            </div>
+          </div>
+
+          <div id="ufo-canvas" class="ufo-canvas-area">
+            <div class="ufo-ship-header">
+              <div class="ufo-ship-element">🛸</div>
+              <div class="tractor-beam-ray" id="ufo-beam-ray"></div>
+            </div>
+            <div id="ufo-crystals-container" class="ufo-crystals-space"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 11: Game 4 - Memory Match -->
+      <section id="screen-game-memory" class="game-screen">
+        <div class="game-layout">
+          <div class="game-header">
+            <button id="memory-back-btn" class="btn btn-secondary btn-sm">← Back</button>
+            <div class="memory-instruction">
+              <span>Match the word pairs!</span>
+            </div>
+            <div class="level-indicator-pill">
+              <span id="memory-matches-display">Pairs Found: 0/4</span>
+            </div>
+            <div class="score-stars-display">
+              ⭐ <span id="memory-earned-stars">0</span>
+            </div>
+          </div>
+
+          <div id="memory-board" class="memory-grid-container">
+            <!-- Dynamically generated cards -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 12: Game 5 - Dino Egg Hatch -->
+      <section id="screen-game-dino" class="game-screen">
+        <div class="game-layout">
+          <div class="game-header">
+            <button id="dino-back-btn" class="btn btn-secondary btn-sm">← Back</button>
+            <div class="dino-target-instruction">
+              <span>Find & hatch:</span>
+              <span id="dino-target-word" class="target-word-display">...</span>
+              <button id="dino-repeat-btn" class="speech-repeat-btn inline-btn" aria-label="Listen Again" title="Listen Again">🔊</button>
+            </div>
+            <div class="level-indicator-pill">
+              <span id="dino-level-display">Hatched: 0/5</span>
+            </div>
+            <div class="score-stars-display">
+              ⭐ <span id="dino-earned-stars">0</span>
+            </div>
+          </div>
+
+          <div id="dino-nest-canvas" class="dino-canvas-area">
+            <div class="dino-mother-svg">🦕</div>
+            <div id="dino-eggs-row" class="dino-eggs-container">
+              <!-- Dynamically populated dino eggs -->
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SCREEN 13: Sticker Scene Creator -->
       <section id="screen-stickers" class="game-screen">
         <div class="stickers-container">
           
@@ -338,6 +447,9 @@
                 <option value="space">🌌 Cosmic Space</option>
                 <option value="jungle">🌳 Deep Jungle</option>
                 <option value="ocean">🐠 Blue Ocean</option>
+                <option value="dino">🦖 Dino Valley</option>
+                <option value="castle">🏰 Enchanted Castle</option>
+                <option value="garage">🏎️ Turbo Track</option>
               </select>
             </div>
             <button id="clear-scene-btn" class="btn btn-danger btn-sm">Clear Scene</button>
